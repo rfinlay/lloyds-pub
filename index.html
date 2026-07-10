@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Lloyd's Pub — El Paso's Best Little Neighborhood Bar Since 1978</title>
+<meta name="description" content="Lloyd's Pub on the Westside of El Paso. A neighborhood dive bar since 1978. Cold drinks, the best bartenders in town, open 9am to 2am daily. 6110 N Mesa St.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Kaushan+Script&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#14100b; --panel:#1e1811; --panel-2:#261e15; --amber:#ffb43d; --amber-d:#e0902a;
+    --cream:#f3e8d5; --muted:#b3a084; --line:rgba(255,180,61,.20);
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%; overflow-x:hidden; scroll-behavior:smooth;}
+  body{margin:0; background:var(--bg); color:var(--cream); font-family:"Source Sans 3",-apple-system,system-ui,sans-serif; font-size:17px; line-height:1.6; width:100%; max-width:100%; overflow-x:hidden; overflow-wrap:break-word;}
+  h1,h2,h3,p,li,.eyebrow{overflow-wrap:break-word;}
+  .display{font-family:"Anton",Impact,sans-serif; font-weight:400; text-transform:uppercase; letter-spacing:1px;}
+  a{color:var(--amber);}
+  .wrap{max-width:1040px; margin:0 auto; padding:0 24px;}
+  .eyebrow{font-size:12px; letter-spacing:4px; text-transform:uppercase; color:var(--amber); font-weight:600; margin:0 0 12px;}
+  .btn{display:inline-block; font-family:"Anton",sans-serif; letter-spacing:1px; text-transform:uppercase; padding:15px 30px; border-radius:2px; text-decoration:none; font-size:16px; transition:transform .15s, background .2s;}
+  .btn.primary{background:var(--amber); color:#1a1206;}
+  .btn.primary:hover{background:var(--amber-d);}
+  .btn.ghost{background:transparent; color:var(--cream); border:2px solid rgba(255,180,61,.4);}
+  .btn.ghost:hover{border-color:var(--amber); color:var(--amber);}
+
+  header.hero{position:relative; min-height:min(94vh,760px); display:flex; align-items:center; text-align:center;
+    background:radial-gradient(80% 60% at 50% 22%, rgba(255,140,26,.20) 0%, rgba(20,16,11,0) 60%), linear-gradient(180deg,#17120c,#100c08);
+    border-bottom:3px solid var(--amber); overflow:hidden;}
+  header.hero::after{content:""; position:absolute; inset:0; pointer-events:none; opacity:.5;
+    background-image:repeating-linear-gradient(0deg, rgba(0,0,0,.22) 0 2px, transparent 2px 4px);}
+  .hero-inner{position:relative; z-index:2; padding:80px 0; width:100%;}
+  .neon{font-family:"Kaushan Script",cursive; font-size:clamp(64px,17vw,150px); line-height:.9; color:#ffe6bd;
+    text-shadow:0 0 6px #ffcf7a, 0 0 16px #ffb43d, 0 0 34px #ff9d2e, 0 0 60px rgba(255,140,26,.55); margin:0;}
+  .subname{font-family:"Anton",sans-serif; letter-spacing:8px; text-transform:uppercase; font-size:clamp(16px,4vw,26px); color:var(--cream); margin:6px 0 0;}
+  .est{display:inline-block; margin-top:20px; border:2px solid var(--amber); color:var(--amber); font-family:"Anton",sans-serif; letter-spacing:3px; font-size:14px; padding:6px 16px; border-radius:2px;}
+  .hero .tag{font-size:clamp(18px,3vw,24px); color:var(--cream); margin:26px auto 8px; max-width:640px; font-weight:600;}
+  .hero .sub{color:var(--muted); max-width:560px; margin:0 auto 34px;}
+  .cta-row{display:flex; flex-wrap:wrap; gap:14px; justify-content:center;}
+
+  section{padding:80px 0; border-bottom:1px solid var(--line);}
+  h2.head{font-family:"Anton",sans-serif; text-transform:uppercase; font-weight:400; font-size:clamp(30px,6vw,52px); line-height:1; margin:4px 0 18px; letter-spacing:1px; color:var(--cream);}
+  .about{text-align:center;}
+  .about p{color:var(--muted); font-size:18px; max-width:720px; margin:12px auto;}
+  .about .big{color:var(--cream); font-size:20px;}
+
+  .love{background:var(--panel);}
+  .l-grid{display:grid; grid-template-columns:1fr; gap:16px; margin-top:20px;}
+  @media(min-width:640px){.l-grid{grid-template-columns:1fr 1fr;}}
+  .l{background:var(--panel-2); border:1px solid var(--line); border-radius:10px; padding:28px;}
+  .l h3{font-family:"Anton",sans-serif; text-transform:uppercase; font-weight:400; font-size:21px; margin:0 0 8px; color:var(--amber); letter-spacing:.5px;}
+  .l p{margin:0; color:var(--muted); font-size:15.5px;}
+
+  .visit{}
+  .v-grid{display:grid; grid-template-columns:1fr; gap:40px; align-items:start;}
+  @media(min-width:820px){.v-grid{grid-template-columns:1fr 1fr; gap:56px;}}
+  .hours{border-top:1px solid var(--line); margin-top:10px;}
+  .hours div{display:flex; justify-content:space-between; padding:11px 0; border-bottom:1px solid var(--line); color:var(--muted);}
+  .hours div b{color:var(--cream); font-weight:600;}
+  .where .big{font-family:"Anton",sans-serif; font-size:26px; color:var(--cream); text-transform:uppercase; letter-spacing:.5px;}
+  .where a.ph{font-family:"Anton",sans-serif; font-size:28px; color:var(--amber); text-decoration:none; display:inline-block; margin:10px 0;}
+  .where p{color:var(--muted); margin:6px 0;}
+
+  .gallery{background:var(--panel);}
+  .g-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin-top:16px;}
+  @media(min-width:760px){.g-grid{grid-template-columns:repeat(4,1fr);}}
+  .tile{aspect-ratio:1; border:1px solid var(--line); background:linear-gradient(160deg,#3a2c18,#14100b); display:grid; place-items:center; color:rgba(255,180,61,.55); font-size:11px; letter-spacing:1px; text-transform:uppercase; text-align:center; padding:8px;}
+
+  footer{background:#0e0a06; text-align:center; padding:44px 24px; color:var(--muted); font-size:14px;}
+  footer .fn{font-family:"Kaushan Script",cursive; color:var(--amber); font-size:34px; display:block; margin-bottom:6px; text-shadow:0 0 14px rgba(255,140,26,.5);}
+  footer a{color:var(--amber);}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;} *{transition:none!important;}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap hero-inner">
+    <h1 class="neon">Lloyd's</h1>
+    <div class="subname">Pub</div>
+    <div class="est">Est. 1978</div>
+    <p class="tag">El Paso's best little neighborhood bar.</p>
+    <p class="sub">Cold drinks, good people, and the best bartenders in town, holding down the Westside since 1978.</p>
+    <div class="cta-row">
+      <a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Lloyd%27s%20Pub%206110%20N%20Mesa%20St%20El%20Paso" target="_blank" rel="noopener">Get directions</a>
+      <a class="btn ghost" href="#visit">Hours &amp; info</a>
+    </div>
+  </div>
+</header>
+
+<section class="about">
+  <div class="wrap">
+    <p class="eyebrow">Since 1978</p>
+    <h2 class="head">A West El Paso institution</h2>
+    <p class="big">Some bars chase trends. Lloyd's just keeps the drinks cold, the tab cheap, and the door open, the way it has for over 45 years.</p>
+    <p>No pretense, no dress code, no nonsense. Just the friendliest bartenders in town, a crowd that feels like family, and the kind of easy night out they don't really make anymore. Whether you're a regular or it's your first time, you're a local the second you walk in.</p>
+  </div>
+</section>
+
+<section class="love">
+  <div class="wrap">
+    <p class="eyebrow">Why locals love it</p>
+    <h2 class="head">Your kind of place</h2>
+    <div class="l-grid">
+      <div class="l"><h3>Best bartenders in town</h3><p>Friendly, fast, and they'll remember your drink. It's the reason people keep coming back.</p></div>
+      <div class="l"><h3>Cheap &amp; cold</h3><p>Honest prices on cold beer and stiff pours. A good time that won't wreck your wallet.</p></div>
+      <div class="l"><h3>Open early, open late</h3><p>Doors open at 9am and we're pouring till 2am, every single day.</p></div>
+      <div class="l"><h3>A true neighborhood dive</h3><p>Locals, laughs, and zero pretense. The vibe's best on Thursday and Friday nights.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="wrap">
+    <p class="eyebrow">Come on in</p>
+    <h2 class="head">Hours &amp; location</h2>
+    <div class="v-grid">
+      <div class="hours">
+        <div><span>Monday</span><b>9:00 AM – 2:00 AM</b></div>
+        <div><span>Tuesday</span><b>9:00 AM – 2:00 AM</b></div>
+        <div><span>Wednesday</span><b>9:00 AM – 2:00 AM</b></div>
+        <div><span>Thursday</span><b>9:00 AM – 2:00 AM</b></div>
+        <div><span>Friday</span><b>9:00 AM – 2:00 AM</b></div>
+        <div><span>Saturday</span><b>9:00 AM – 2:00 AM</b></div>
+        <div><span>Sunday</span><b>10:00 AM – 2:00 AM</b></div>
+      </div>
+      <div class="where">
+        <div class="big">Find us on the Westside</div>
+        <p>6110 N Mesa St, Ste E<br>El Paso, TX 79912</p>
+        <a class="ph" href="tel:+19155815793">(915) 581-5793</a>
+        <p><a href="https://www.facebook.com/lloydspub/" target="_blank" rel="noopener">Follow us on Facebook</a> for events &amp; specials.</p>
+        <p style="margin-top:16px;"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Lloyd%27s%20Pub%206110%20N%20Mesa%20St%20El%20Paso" target="_blank" rel="noopener">Get directions</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery">
+  <div class="wrap">
+    <p class="eyebrow">The joint</p>
+    <h2 class="head">Inside Lloyd's</h2>
+    <div class="g-grid">
+      <div class="tile">Bar photo here</div>
+      <div class="tile">Your photo here</div>
+      <div class="tile">Your photo here</div>
+      <div class="tile">Your photo here</div>
+    </div>
+    <p style="margin-top:16px; color:var(--muted); font-style:italic; font-size:15px;">Drop in real photos of the bar, the regulars, and the good nights.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="fn">Lloyd's Pub</span>
+    Est. 1978 &middot; 6110 N Mesa St, Ste E, El Paso, TX 79912 &middot; (915) 581-5793<br>
+    <a href="https://www.facebook.com/lloydspub/" target="_blank" rel="noopener">Facebook</a>
+  </div>
+</footer>
+
+</body>
+</html>
