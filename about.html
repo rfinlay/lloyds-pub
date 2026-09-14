@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Lloyd's Pub, what you'd be getting</title>
+<meta name="description" content="A plain explanation to go with the Lloyd's Pub preview site: what it is, how the merch store would work, and what happens after launch.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Kaushan+Script&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#14100b; --panel:#1e1811; --panel-2:#261e15; --amber:#ffb43d; --amber-d:#e0902a;
+    --cream:#f3e8d5; --muted:#b3a084; --line:rgba(255,180,61,.20);
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%; overflow-x:hidden;}
+  body{margin:0; background:var(--bg); color:var(--cream); font-family:"Source Sans 3",-apple-system,system-ui,sans-serif; font-size:17px; line-height:1.6; width:100%; max-width:100%; overflow-x:hidden; overflow-wrap:break-word;}
+  h1,h2,h3,p,li,.eyebrow{overflow-wrap:break-word;}
+  a{color:var(--amber);}
+  .wrap{max-width:760px; margin:0 auto; padding:0 24px;}
+  .eyebrow{font-size:12px; letter-spacing:4px; text-transform:uppercase; color:var(--amber); font-weight:600; margin:0 0 12px;}
+  .btn{display:inline-block; font-family:"Anton",sans-serif; letter-spacing:1px; text-transform:uppercase; padding:15px 30px; border-radius:2px; text-decoration:none; font-size:16px; transition:transform .15s, background .2s;}
+  .btn.primary{background:var(--amber); color:#1a1206;}
+  .btn.primary:hover{background:var(--amber-d);}
+
+  header.hero{position:relative; text-align:center;
+    background:radial-gradient(80% 60% at 50% 22%, rgba(255,140,26,.20) 0%, rgba(20,16,11,0) 60%), linear-gradient(180deg,#17120c,#100c08);
+    border-bottom:3px solid var(--amber); overflow:hidden;}
+  header.hero::after{content:""; position:absolute; inset:0; pointer-events:none; opacity:.5;
+    background-image:repeating-linear-gradient(0deg, rgba(0,0,0,.22) 0 2px, transparent 2px 4px);}
+  .hero-inner{position:relative; z-index:2; padding:64px 0 56px; width:100%;}
+  .neon{font-family:"Kaushan Script",cursive; font-size:clamp(56px,13vw,96px); line-height:.9; color:#ffe6bd;
+    text-shadow:0 0 6px #ffcf7a, 0 0 16px #ffb43d, 0 0 34px #ff9d2e, 0 0 60px rgba(255,140,26,.55); margin:0;}
+  .subname{font-family:"Anton",sans-serif; letter-spacing:8px; text-transform:uppercase; font-size:clamp(14px,3vw,20px); color:var(--cream); margin:6px 0 0;}
+  .hero .eyebrow{margin-top:36px;}
+  h1.head{font-family:"Anton",sans-serif; text-transform:uppercase; font-weight:400; font-size:clamp(34px,7vw,56px); line-height:1; margin:0 0 18px; letter-spacing:1px; color:var(--cream);}
+  .hero .sub{color:var(--muted); max-width:560px; margin:0 auto 30px; font-size:18px;}
+  .hero .note{color:var(--muted); font-size:14px; margin:18px 0 0;}
+
+  section{padding:64px 0; border-bottom:1px solid var(--line);}
+  section.alt{background:var(--panel);}
+  h2.head{font-family:"Anton",sans-serif; text-transform:uppercase; font-weight:400; font-size:clamp(28px,5.5vw,42px); line-height:1.05; margin:4px 0 18px; letter-spacing:1px; color:var(--cream);}
+  h3{font-family:"Anton",sans-serif; text-transform:uppercase; font-weight:400; font-size:21px; margin:34px 0 8px; color:var(--amber); letter-spacing:.5px;}
+  h3:first-of-type{margin-top:28px;}
+  p{margin:0 0 14px; color:var(--cream);}
+  p.lead{font-size:19px; font-weight:600;}
+  p.quiet{color:var(--muted);}
+  ul.plain{list-style:none; padding:0; margin:18px 0 0; border-top:1px solid var(--line);}
+  ul.plain li{padding:11px 0; border-bottom:1px solid var(--line); color:var(--cream);}
+  ul.plain li span{color:var(--muted);}
+  ul.plain li a.ph{font-family:"Anton",sans-serif; font-size:20px; color:var(--amber); text-decoration:none; letter-spacing:.5px;}
+
+  .cards{display:grid; grid-template-columns:1fr; gap:16px; margin-top:24px;}
+  .card{background:var(--panel-2); border:1px solid var(--line); border-radius:10px; padding:26px 28px; position:relative;}
+  .card.default{border-color:rgba(255,180,61,.55);}
+  .card .num{font-family:"Anton",sans-serif; font-size:14px; letter-spacing:3px; color:var(--amber); display:block; margin-bottom:6px;}
+  .card h3{margin:0 0 10px; font-size:22px; color:var(--cream);}
+  .card p{margin:0 0 10px; color:var(--muted); font-size:16px;}
+  .card p:last-child{margin-bottom:0;}
+  .tag{display:inline-block; border:1px solid var(--amber); color:var(--amber); font-family:"Anton",sans-serif; letter-spacing:2px; font-size:12px; padding:4px 10px; border-radius:2px; margin-left:8px; vertical-align:middle;}
+
+  ol.ask{padding:0 0 0 24px; margin:18px 0 0;}
+  ol.ask li{padding:8px 0 8px 6px; color:var(--cream);}
+  ol.ask li::marker{color:var(--amber); font-family:"Anton",sans-serif; letter-spacing:1px;}
+  ol.ask li span{display:block; color:var(--muted); font-size:15.5px;}
+
+  .sign{margin-top:28px; color:var(--muted);}
+  .sign b{color:var(--cream); font-weight:600;}
+
+  footer{background:#0e0a06; text-align:center; padding:44px 24px; color:var(--muted); font-size:14px;}
+  footer .fn{font-family:"Kaushan Script",cursive; color:var(--amber); font-size:34px; display:block; margin-bottom:6px; text-shadow:0 0 14px rgba(255,140,26,.5);}
+  @media(prefers-reduced-motion:reduce){*{transition:none!important;}}
+
+  @media print{
+    @page{margin:0.7in;}
+    html,body{background:#fff; color:#111; font-size:10.5pt; line-height:1.45; overflow:visible;}
+    .wrap{max-width:none; padding:0;}
+    header.hero{background:none; border-bottom:2px solid #111; color:#111;}
+    header.hero::after{display:none;}
+    .hero-inner{padding:0 0 14pt;}
+    .hero .eyebrow{margin-top:14pt;}
+    .hero .sub{font-size:11pt; margin-bottom:6pt;}
+    .neon{color:#111; text-shadow:none; font-size:30pt;}
+    .subname{font-size:11pt;}
+    h1.head{font-size:26pt;}
+    h2.head{font-size:20pt; margin-bottom:8pt;}
+    h3{font-size:13pt; margin:14pt 0 4pt;}
+    p{margin-bottom:8pt;}
+    p.lead{font-size:11.5pt;}
+    ul.plain{margin-top:8pt;}
+    ul.plain li{padding:5pt 0;}
+    ul.plain li a.ph{font-size:12pt;}
+    .cards{gap:8pt; margin-top:10pt;}
+    ol.ask{margin-top:8pt;}
+    ol.ask li{padding:4pt 0 4pt 4pt;}
+    ol.ask li span,ul.plain li span,.hero .note,.eyebrow{font-size:10pt;}
+    .sign{margin-top:12pt;}
+    .subname,h1.head,h2.head,h3,p,li,.card h3,.card p,.sign,.sign b,ul.plain li,ul.plain li span,ol.ask li,ol.ask li span,.hero .sub,.hero .note{color:#111;}
+    .eyebrow,.card .num,ol.ask li::marker,ul.plain li a.ph{color:#333;}
+    a{color:#111; text-decoration:underline;}
+    a.btn{display:none;}
+    .hero .note::after{content:" " attr(data-url); font-weight:600;}
+    section{padding:12pt 0; border-bottom:1px solid #bbb; page-break-inside:auto;}
+    section.alt{background:none;}
+    .card{background:none; border:1px solid #999; border-radius:0; padding:9pt 11pt; page-break-inside:avoid;}
+    .card h3{font-size:13pt; margin:0 0 4pt;}
+    .card p{font-size:10.5pt; margin-bottom:5pt;}
+    .card.default{border-color:#111; border-width:2px;}
+    .tag{border-color:#111; color:#111;}
+    ul.plain,ul.plain li{border-color:#ccc;}
+    h2.head,h3{page-break-after:avoid;}
+    footer{background:none; color:#333; border-top:1px solid #bbb;}
+    footer .fn{color:#111; text-shadow:none;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap hero-inner">
+    <div class="neon">Lloyd's</div>
+    <div class="subname">Pub</div>
+    <p class="eyebrow">A note to go with the preview</p>
+    <h1 class="head">What you'd be getting</h1>
+    <p class="sub">You asked for something you could look at. The link below is the site. This page is the plain explanation that goes with it: what the site is, how selling merch through it would work, and what happens after it goes live.</p>
+    <a class="btn primary" href="https://rfinlay.github.io/lloyds-pub/">Open the preview site</a>
+    <p class="note" data-url="https://rfinlay.github.io/lloyds-pub/">There are no prices on this page. Those come after we sit down and talk.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Starting point</p>
+    <h2 class="head">It's a draft, not a finished thing</h2>
+    <p class="lead">The site at the link above exists so there's something concrete to react to instead of a blank page.</p>
+    <p>Everything you can see on it changes to whatever you want. The colors, the photos, the wording, the layout, the order of the sections, all of it. If something on there is wrong, or just not how you'd say it, that's the point of showing it to you early.</p>
+    <p>Changes before launch don't cost anything. Asking for a different color, or a different photo, or for a whole section to go away, doesn't start a meter. A draft is supposed to be wrong first so it can be right before it goes out.</p>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <p class="eyebrow">As it stands</p>
+    <h2 class="head">What's on the site today</h2>
+    <p>One page, built for a phone first, since that's where most people will find a bar. It has:</p>
+    <ul class="plain">
+      <li>Hours for every day of the week <span>(9am to 2am, Sunday from 10am)</span></li>
+      <li>The address, with a map that opens in one tap</li>
+      <li>The phone number, tap to call: <a class="ph" href="tel:+19155815793">(915) 581-5793</a></li>
+      <li>Directions in one tap</li>
+      <li>The story <span>(Est. 1978, a West El Paso institution)</span></li>
+      <li>Why locals love it <span>(the bartenders, cold drinks, open early and late, a real neighborhood bar)</span></li>
+      <li>Photo spots, waiting for real pictures of the bar</li>
+    </ul>
+    <p class="quiet" style="margin-top:18px;">The photo spots are placeholders right now. Real pictures of the bar, the regulars, and the good nights go in their place. Phone photos are fine. You can also change any of the wording; what's there now is my best guess at how Lloyd's talks about itself, not the final word.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Hats, shirts, and whatever else</p>
+    <h2 class="head">Selling merch through the site</h2>
+    <p class="lead">You asked whether the site could sell merchandise. It can. Here's how I'd set it up, and why.</p>
+
+    <h3>Start with buy online, pick up at the bar</h3>
+    <p>Someone orders a shirt from their phone, pays, and picks it up at Lloyd's. The reason to start here is simple: a person who comes in for a shirt usually buys a drink while they're there. The store feeds the bar, not just the store.</p>
+    <p>It's also the easier version to run. Nothing to box up, nothing to mail, no postage to figure out. A bartender hands over a shirt and checks a name off a list.</p>
+
+    <h3>Add shipping later, as a switch, not a rebuild</h3>
+    <p>A bar that's been open since 1978 has people who moved away and still think of it as theirs. Somebody in Phoenix who drank there in 1994 wants that shirt and can't drive over for it. Shipping is how that person buys it.</p>
+    <p>The kind of store I'm describing has shipping built in already. Turning it on later means setting a shipping rate and deciding who takes the box to the post office. It doesn't mean rebuilding anything. I'd get pickup running first, then turn shipping on once pickup is working and you've decided you want the extra step. It's worth turning on eventually. It just isn't where to start.</p>
+
+    <h3>What goes in it</h3>
+    <p>Hats and shirts to start, since those exist. Whatever else you carry goes in the same way. I don't know what's on the shelf right now, and that's one of the things I'd want to see rather than guess at.</p>
+
+    <h3>How the store actually works</h3>
+    <p>The store runs on an established platform, something like Square or Shopify, wired into the site. It isn't software I'd build myself. That's on purpose, and it means a few things:</p>
+    <ul class="plain">
+      <li>The account is in your name. Money from sales goes straight to your business. Refunds and chargebacks sit with your business too, which is where they belong.</li>
+      <li>You add a product from your phone. Take a picture, type the name and what you charge for it, tap save. There's no admin system to learn.</li>
+      <li>The store keeps working regardless of who built the site. If I got hit by a bus tomorrow, your store would still take orders on Friday.</li>
+    </ul>
+
+    <h3>The honest tradeoff</h3>
+    <p>The platform charges a monthly fee and takes a small cut of each sale. That's the cost of the store being something you own, that handles card processing and the security around it, and that keeps running no matter who built the site. I'd rather say that now than have it show up later as a surprise.</p>
+
+    <h3>One thing worth checking: Square</h3>
+    <p>Does Lloyd's already run Square at the register? I don't know, and I'd want to before pointing at any one platform. If it does, adding online sales is a smaller step, because the products and the payouts already live in a system you log into. If it's something else, or a plain card machine, the other options work fine. It just changes which one I'd recommend.</p>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <p class="eyebrow">After it goes live</p>
+    <h2 class="head">What happens after launch</h2>
+    <p class="lead">Three ways this can go. The first one is what happens on its own at handover. It isn't something you sign up for. The other two sit on top of it, if you ever want them.</p>
+
+    <div class="cards">
+      <div class="card default">
+        <span class="num">One</span>
+        <h3>You own it and run it yourself <span class="tag">Default</span></h3>
+        <p>The site is plain files in a hosting account in your name. The store is your own account. Nothing renews, nothing is owed, and nobody's permission is needed to change anything.</p>
+        <p>This is where you land by doing nothing.</p>
+      </div>
+      <div class="card">
+        <span class="num">Two</span>
+        <h3>Call when it's easier not to</h3>
+        <p>Something needs changing and you'd rather not deal with it: a new photo, updated hours, a section reworded. You call, I quote it before any work starts, you say yes or no.</p>
+        <p>This sits on top of the first option. It doesn't replace it.</p>
+      </div>
+      <div class="card">
+        <span class="num">Three</span>
+        <h3>A standing arrangement</h3>
+        <p>Regular updates on a schedule. Worth mentioning for a bar specifically: a bar has real weekly content, live music, specials, game day, in a way most businesses don't. For most places I wouldn't bring this up. For a bar it can earn its keep.</p>
+      </div>
+    </div>
+
+    <p class="quiet" style="margin-top:24px;">None of the three has a number on it here. The numbers come after we've talked and I know what you actually want. The first option is the default and costs nothing. Do nothing, and that's where you are.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Before any numbers</p>
+    <h2 class="head">What I'd want to ask you</h2>
+    <p>Not a form. Just the four things that change what I'd recommend.</p>
+    <ol class="ask">
+      <li>Does the bar run Square, or Toast, at the register already? <span>This decides which store platform makes sense.</span></li>
+      <li>What merch actually exists right now? <span>Better if you can show me than tell me.</span></li>
+      <li>When new shirts come in, who adds them to the site? <span>You, Harley, a bartender, or me.</span></li>
+      <li>Is there a logo file anywhere? <span>Or does the logo only exist on the sign and a t-shirt.</span></li>
+    </ol>
+    <p class="sign">A short sit-down at a slow time is easier than email for all of this. Whenever works for you.<br><b>Rick</b></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="fn">Lloyd's Pub</span>
+    Est. 1978 &middot; 6110 N Mesa St, Ste E, El Paso, TX 79912 &middot; (915) 581-5793<br>
+    Private preview page. Not published anywhere.
+  </div>
+</footer>
+
+</body>
+</html>
